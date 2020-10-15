@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+
+html,
+body {
+  background: #ff512f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f09819,
+    #ff512f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f09819,
+    #ff512f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Roboto Slab", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.main-container {
+  width: 80vw;
+  height: 70vh;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search {
+  width: 40vw !important;
+  height: 4vh !important;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.city-info {
+  text-align: center;
+  margin-top: 2.8rem;
+  font-size: 1.2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 2rem;
+}
+
+.grid-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 2vh;
+  font-size: 1.4rem;
+  color: #78909c;
+}
+
+.content {
+  font-size: 1.6rem;
+}
+.city-info img {
+  width: 3vw;
+  height: 3vh;
+}
+
+.search-icon {
+  width: 3vw;
+  height: 3vh;
+}
+
+.error-text {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 8rem;
+}
+
+.weather-icon {
+  display: block;
+  margin: auto;
+  width: 10rem;
+  height: 10rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-container {
+    height: 40vh;
+    margin-top: auto;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 752px) {
+  .label,
+  .content {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+  .main-container {
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .label,
+  .content,
+  .city-info {
+    font-size: 0.96rem !important;
   }
 }
